@@ -21,10 +21,331 @@
             <webMaster>2438863910@qq.com (个豆角)</webMaster>
         
         
-        <lastBuildDate>Wed, 26 Jul 2023 19:38:37 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 26 Jul 2023 19:46:37 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://gedoujiao.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Ms_1</title>
+                <link>https://gedoujiao.github.io/life/ms_1/</link>
+                <guid isPermaLink="true">https://gedoujiao.github.io/life/ms_1/</guid>
+                <pubDate>Wed, 26 Jul 2023 19:22:27 &#43;0800</pubDate>
+                
+                    <author>2438863910@qq.com (个豆角)</author>
+                
+                
+                
+                    <description>&lt;h1 id=&#34;管理学一&#34;&gt;管理学（一）&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2023-7-25&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;先导课&#34;&gt;先导课&lt;/h2&gt;
+&lt;h3 id=&#34;如何运用理论指导实践&#34;&gt;如何运用理论指导实践？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;理论是什么&lt;/strong&gt;——理论是从实践中总结出来的&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;理论是条理化的实践的&lt;strong&gt;经验&lt;/strong&gt;，所以必然可以指导实践&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;理论和实践之间的关系：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;理论来源于实践，又高于实践。&lt;/li&gt;
+&lt;li&gt;理论可以指导实践，在实践中得到进一步发展。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;为什么实际生活中实践与理论脱节？&lt;/strong&gt;——学习理论时，没有了解&lt;strong&gt;适用前提&lt;/strong&gt;和运用的方法。&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+    C[理论内容或要点] --&gt; D[理论假设前提]
+    C --&gt; E[理论运用方法]
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;反例：360°绩效考核&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;多看原著或者去追问老师，追求前提！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;正例：有公司需要增加订单的完成率，怎么办？&lt;/p&gt;
+&lt;p&gt;答：很难说。（要先去看看）&lt;/p&gt;
+&lt;p&gt;问：需要什么资料？（调研内容）&lt;/p&gt;
+&lt;p&gt;答：1. 抽象实际问题为理论问题：如何提高生产效率？&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;根据理论设计调研方案。（人机料法环）&lt;/li&gt;
+&lt;li&gt;根据调研方案进行调研。（现场或资料）&lt;/li&gt;
+&lt;li&gt;梳理出正真的问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;结论必然不同，理论支持必然一致。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;科学解决管理问题的方法：&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+	A[解决需要解决的管理问题] --&gt; B(通过结构化分析)
+	B --&gt; C[以理论为指导\以假设为前提]
+	B --&gt; D[以事实为依据]
+&lt;/div&gt;
+&lt;p&gt;难点：如何抽象&lt;/p&gt;
+&lt;p&gt;学习重点：为什么&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;管理学的特点及其学习方法&#34;&gt;管理学的特点及其学习方法。&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;资源、目标、环境&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;学习方法：熟读经书、结交高人、勤于实践、善于思考&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;什么是管理&#34;&gt;什么是管理？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;管理是&lt;strong&gt;协调&lt;/strong&gt;的一种方式。&lt;/li&gt;
+&lt;li&gt;管理的多样化，是由于协调对象的多样化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;为什么需要管理&#34;&gt;为什么需要管理？&lt;/h3&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+	A[人的资源] --&gt;  |投入|B[人的欲望]
+	A --&gt; C[无限的]
+	B --&gt; D[有限的]
+	C --&gt; E[矛盾]
+	D --&gt; E
+	E --&gt; 协调
+&lt;/div&gt;
+&lt;p&gt;由于人&lt;strong&gt;无限的欲望&lt;/strong&gt;与人&lt;strong&gt;有限资源&lt;/strong&gt;的矛盾。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;欲望是无限的。 如果没有欲望则不存在矛盾，则不需要管理。&lt;/p&gt;
+&lt;p&gt;资源是有限的。&lt;/p&gt;
+&lt;p&gt;只有投入资源才能获取资源（没有不劳而获）。 空气？（道德源自于恐惧） 富二代？（前辈的付出，足够的耐心和孝心）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个老师的有意思的论断：个人的价值取决于自己，所以为什么要批判老板给的太少了。不见钱眼开，但要求公平对待&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;管理就是为了&lt;strong&gt;协调这个矛盾&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;有哪些协调方法&#34;&gt;有哪些协调方法？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;生产劳动（创造）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;创造：提高向大自然索取的能力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;贸易交换&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;组织分工（联盟）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;道德教育（宗教）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;战争掠夺&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;科学管理&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当&lt;strong&gt;生产&lt;/strong&gt;力水平受限——&lt;strong&gt;合作&lt;/strong&gt;扩张——扩张到资源掠夺完——&lt;strong&gt;战争&lt;/strong&gt;（只有有强弱差距，资源的损失才会少）——战争到最后只剩强者——&lt;strong&gt;交换&lt;/strong&gt;——有的东西大家有需要——东方（&lt;strong&gt;道德&lt;/strong&gt;教育，贫穷的和谐，限制人的欲望，“欲为万恶之源”）&lt;/p&gt;
+&lt;p&gt;——西方（科学的&lt;strong&gt;管理&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;我觉得老师说的很好的一句话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;管理只是为了更好的利用资源的一种方法，面对具体的问题，我们应该多管齐下，而不仅仅是依赖科学的管理。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;衡量管理好坏的标准管理的有效性原理&#34;&gt;衡量管理好坏的标准——管理的有效性原理&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;效率(投入产出比)和效益（目标达成度）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;效果=效率（资源有限）+效益（满足需求）&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+A[有效的管理] --&gt; |资源有限|B[效率:资源产出比]
+A --&gt; |满足目的|C[效益:目标达成度]
+B --&gt; |怎么做,方式方法|E(以比较经济的方法)
+C --&gt; |做什么,价值取向|F(做有助于目标实现的事)
+E --&gt; Q[有效的管理,做好对的事]
+F --&gt; Q
+衡量管理好坏的标准
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;效率：怎么做，方式方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;效益：做什么，目的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二者缺一不可&lt;/p&gt;
+&lt;p&gt;ex：政府盖章，层层把关更为了提高效益，但大大减少了效率&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;效率与效益先比较，效益永远是第一位的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作对的事情是所有事情的第一步!&lt;/p&gt;
+&lt;p&gt;将一件错误的事情做的越好，越糟糕。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;管理的有效性原理的应用&#34;&gt;管理的有效性原理的应用&lt;/h3&gt;
+&lt;p&gt;面对一件事的思维方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;先了解这是一件什么事？搞清楚&lt;strong&gt;前提&lt;/strong&gt;。——（询问调查）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;应该怎么学习管理学？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多看书？找个老师教？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;假设了一个前提：对方没有尝试过这些方法，对方是个傻瓜。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这件事情需要处理吗？——目标定位和价值导向&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们只解决需要解决的事情。&lt;/p&gt;
+&lt;p&gt;根据目标定位和价值取向。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这件事由谁来做？——角色定位和职业分工&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;根据角色定位和职责分工。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么时候做？——重要度和紧急度&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;什么先做？&lt;/p&gt;
+&lt;p&gt;重要和紧急的哪个先做？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;要事优先！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;短信发给你，就是告诉你：你有空的时候就看一下。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;怎么做？能不能做？——（计划制定和评定）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;只做重要的，需要解决的，必须由我自己来做的事情，这样才能最大化地体现我自己的价值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;管理的职能&#34;&gt;管理的职能&lt;/h3&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+a[决策,制定目标] --&gt; b[计划工作,有限资源的合理配置]
+a --&gt; c[组织工作,人员权力的合理配置]
+a --&gt; e[领导工作,指导协调激励,积极性的调动和方向的把握]
+a --&gt; f[控制工作,检查和监督]
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;领导者：三挥手，上挥手（指导方向），中挥手（协调矛盾），下挥手（激励）&lt;/p&gt;
+&lt;p&gt;领导挥挥手，管理者指指手，人民群众齐动手。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;环境是多变的，需要我们及时纠偏。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;管理的实质&#34;&gt;管理的实质&lt;/h3&gt;
+&lt;p&gt;人们为了实现目标的一种手段！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;所以&lt;strong&gt;管理不是目的&lt;/strong&gt;，不要为了管理而管理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;管理的效果取决于管理者的水平。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;运用如何面对规章制度&#34;&gt;运用：如何面对规章制度&lt;/h3&gt;
+&lt;p&gt;很难说。（对于管理而言，就事论事是不好的习惯）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;规章制度是什么？（一种有效的&lt;strong&gt;管理手段&lt;/strong&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;规章制度的作用（提高效率、落实导向、保证做对的事情、并把对的事情做好）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可不可以违反？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❌有奖有惩罚（信息传递不明确）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有章要循与目标导向有无矛盾：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;无矛盾，照章执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;特殊情况，酌情处理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;怎么界定“酌情”&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;红绿灯：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;为什么红灯不能闯？
+&lt;ul&gt;
+&lt;li&gt;生命安全&lt;/li&gt;
+&lt;li&gt;交通效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;有人闯红灯怎么说？（管理的艺术）
+&lt;ul&gt;
+&lt;li&gt;为了保障您和他人的生命安全&lt;/li&gt;
+&lt;li&gt;因为你妨碍了集体的交通效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;特殊范围：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;当闯红灯的目的和规章的&lt;strong&gt;目的一致&lt;/strong&gt;，可以闯。&lt;/li&gt;
+&lt;li&gt;红灯坏了，&lt;strong&gt;规章失效&lt;/strong&gt;，可以闯。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;酌情原则：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;可以闯，但&lt;strong&gt;目标有利原则不能破&lt;/strong&gt;!可以闯，但不能撞死人。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;前提：&lt;/p&gt;
+&lt;p&gt;（目标是否一致，规章是否失效，主观判断）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;情况紧急，且条件确认。&lt;/li&gt;
+&lt;li&gt;（紧急和确认也是主观判断）后果自负。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;目标有利原则：局部的与整体的，长远的与暂时的&lt;/p&gt;
+&lt;p&gt;管理的艺术；&lt;/p&gt;
+&lt;p&gt;管理学是科学。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;管理学的思维方式&#34;&gt;管理学的思维方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先说，&lt;strong&gt;很难说&lt;/strong&gt;：具体问题具体分析&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对管理问题抱有敬畏之心。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;总的来说，要&lt;strong&gt;统统摆平&lt;/strong&gt;：目标导向，综合考虑&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有限的资源，很多的目标&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;具体的来说，从我做起。&lt;strong&gt;责任在我&lt;/strong&gt;：从认识自我、改变自我着手&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;只有自己是可控的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
     </channel>
 </rss>
