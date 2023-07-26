@@ -21,34 +21,10 @@
             <webMaster>2438863910@qq.com (个豆角)</webMaster>
         
         
-        <lastBuildDate>Wed, 26 Jul 2023 19:25:45 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 26 Jul 2023 19:38:37 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://gedoujiao.github.io/rss.xml" />
         
-        
-            <item>
-                <title>Docker</title>
-                <link>https://gedoujiao.github.io/blogs/docker/</link>
-                <guid isPermaLink="true">https://gedoujiao.github.io/blogs/docker/</guid>
-                <pubDate>Wed, 26 Jul 2023 19:22:56 &#43;0800</pubDate>
-                
-                    <author>2438863910@qq.com (个豆角)</author>
-                
-                
-                
-                    <description></description>
-                
-                
-                
-                
-                
-                    
-                        
-                    
-                        
-                    
-                
-            </item>
         
     </channel>
 </rss>
