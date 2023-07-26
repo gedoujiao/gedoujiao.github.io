@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>bean&#39;s blog</title>
+        <link>https://gedoujiao.github.io/</link>
+        <description>bean&#39;s blog</description>
+        <generator>Hugo 0.115.4 https://gohugo.io/</generator>
+        
+            <language>zh-CN</language>
+        
+        
+            <managingEditor>2438863910@qq.com (个豆角)</managingEditor>
+        
+        
+            <webMaster>2438863910@qq.com (个豆角)</webMaster>
+        
+        
+        <lastBuildDate>Wed, 26 Jul 2023 19:25:45 &#43;0800</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://gedoujiao.github.io/rss.xml" />
+        
+        
+            <item>
+                <title>Docker</title>
+                <link>https://gedoujiao.github.io/blogs/docker/</link>
+                <guid isPermaLink="true">https://gedoujiao.github.io/blogs/docker/</guid>
+                <pubDate>Wed, 26 Jul 2023 19:22:56 &#43;0800</pubDate>
+                
+                    <author>2438863910@qq.com (个豆角)</author>
+                
+                
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>

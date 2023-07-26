@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+    <title type="text">bean&#39;s blog</title>
+    <subtitle type="html">bean&#39;s blog</subtitle>
+    <updated>2023-07-26T19:25:45&#43;08:00</updated>
+    <id>https://gedoujiao.github.io/</id>
+    <link rel="alternate" type="text/html" href="https://gedoujiao.github.io/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://gedoujiao.github.io/atom.xml" />
+    <author>
+            <name>个豆角</name>
+            <uri>https://gedoujiao.github.io/</uri>
+            
+                <email>2438863910@qq.com</email>
+            </author>
+    
+    <generator uri="https://gohugo.io/" version="0.115.4">Hugo</generator>
+        <entry>
+            <title type="text">Docker</title>
+            <link rel="alternate" type="text/html" href="https://gedoujiao.github.io/blogs/docker/" />
+            <id>https://gedoujiao.github.io/blogs/docker/</id>
+            <updated>2023-07-26T19:22:56&#43;08:00</updated>
+            <published>2023-07-26T19:22:56&#43;08:00</published>
+            <author>
+                    <name>个豆角</name>
+                    <uri>https://gedoujiao/github.io</uri>
+                    <email>2438863910@qq.com</email>
+                    </author>
+            <summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+</feed>
