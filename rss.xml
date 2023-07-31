@@ -21,318 +21,246 @@
             <webMaster>2438863910@qq.com (个豆角)</webMaster>
         
         
-        <lastBuildDate>Wed, 26 Jul 2023 19:46:37 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 31 Jul 2023 23:47:26 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://gedoujiao.github.io/rss.xml" />
         
         
             <item>
-                <title>Ms_1</title>
-                <link>https://gedoujiao.github.io/life/ms_1/</link>
-                <guid isPermaLink="true">https://gedoujiao.github.io/life/ms_1/</guid>
-                <pubDate>Wed, 26 Jul 2023 19:22:27 &#43;0800</pubDate>
+                <title>Docker</title>
+                <link>https://gedoujiao.github.io/blogs/docker/</link>
+                <guid isPermaLink="true">https://gedoujiao.github.io/blogs/docker/</guid>
+                <pubDate>Wed, 26 Jul 2023 19:22:56 &#43;0800</pubDate>
                 
                     <author>2438863910@qq.com (个豆角)</author>
                 
                 
                 
-                    <description>&lt;h1 id=&#34;管理学一&#34;&gt;管理学（一）&lt;/h1&gt;
+                    <description>&lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;2023-7-25&lt;/p&gt;
+&lt;p&gt;与运维部署有关的技术&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;先导课&#34;&gt;先导课&lt;/h2&gt;
-&lt;h3 id=&#34;如何运用理论指导实践&#34;&gt;如何运用理论指导实践？&lt;/h3&gt;
+&lt;h2 id=&#34;初识docker&#34;&gt;初识Docker&lt;/h2&gt;
+&lt;p&gt;写好的代码要接触三个环境：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;理论是什么&lt;/strong&gt;——理论是从实践中总结出来的&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;理论是条理化的实践的&lt;strong&gt;经验&lt;/strong&gt;，所以必然可以指导实践&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;理论和实践之间的关系：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;理论来源于实践，又高于实践。&lt;/li&gt;
-&lt;li&gt;理论可以指导实践，在实践中得到进一步发展。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;为什么实际生活中实践与理论脱节？&lt;/strong&gt;——学习理论时，没有了解&lt;strong&gt;适用前提&lt;/strong&gt;和运用的方法。&lt;/p&gt;
-&lt;div class=&#34;mermaid&#34;&gt;
-graph TD
-    C[理论内容或要点] --&gt; D[理论假设前提]
-    C --&gt; E[理论运用方法]
+&lt;li&gt;开发环境&lt;/li&gt;
+&lt;li&gt;测试环境&lt;/li&gt;
+&lt;li&gt;生产环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于代码在不同的环境下运行，就会出问题。（原因：水土不服）&lt;/p&gt;
+&lt;p&gt;解决方法：把&lt;strong&gt;环境和代码&lt;/strong&gt;一起发给别人。&lt;/p&gt;
+&lt;p&gt;容器：&lt;strong&gt;环境加代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Docker：是一个开源的应用容器引擎。可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的Linux机器上。&lt;/p&gt;
+&lt;h3 id=&#34;安装docker&#34;&gt;安装Docker&lt;/h3&gt;
+&lt;p&gt;参考https://docker.easydoc.net/&lt;/p&gt;
+&lt;h3 id=&#34;docker架构&#34;&gt;Docker架构&lt;/h3&gt;
+&lt;p&gt;Docker 包括三个基本概念:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;镜像（Image）&lt;/strong&gt;：Docker 镜像（Image），就相当于是一个 root 文件系统。比如官方镜像 ubuntu:16.04 就包含了完整的一套 Ubuntu16.04 最小系统的 root 文件系统。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容器（Container）&lt;/strong&gt;：镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的类和实例一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;仓库（Repository）&lt;/strong&gt;：仓库可看成一个代码控制中心，用来保存镜像。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Docker 使用客户端-服务器 (C/S) 架构模式，使用远程API来管理和创建Docker容器。&lt;/p&gt;
+&lt;p&gt;Docker 容器通过 Docker 镜像来创建。&lt;/p&gt;
+&lt;p&gt;容器与镜像的关系类似于面向对象编程中的对象与类。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../../576507-docker1.png&#34; alt=&#34;576507-docker1&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;docker的命令&#34;&gt;Docker的命令&lt;/h2&gt;
+&lt;h3 id=&#34;docker容器的使用&#34;&gt;Docker容器的使用&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.runoob.com/docker/docker-container-usage.html&#34;&gt;Docker 容器使用 | 菜鸟教程 (runoob.com)&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//查看所有命令选项
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker stats --help
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//docker &lt;span class=&#34;nb&#34;&gt;command&lt;/span&gt; --help 更深入地了解指定地命令使用方法
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//获取镜像,如果本地没有ubuntu镜像，则可以这样载入
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//或者
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull ubuntu:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;反例：360°绩效考核&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;多看原著或者去追问老师，追求前提！&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;正例：有公司需要增加订单的完成率，怎么办？&lt;/p&gt;
-&lt;p&gt;答：很难说。（要先去看看）&lt;/p&gt;
-&lt;p&gt;问：需要什么资料？（调研内容）&lt;/p&gt;
-&lt;p&gt;答：1. 抽象实际问题为理论问题：如何提高生产效率？&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;根据理论设计调研方案。（人机料法环）&lt;/li&gt;
-&lt;li&gt;根据调研方案进行调研。（现场或资料）&lt;/li&gt;
-&lt;li&gt;梳理出正真的问题。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;结论必然不同，理论支持必然一致。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;科学解决管理问题的方法：&lt;/p&gt;
-&lt;div class=&#34;mermaid&#34;&gt;
-graph TD
-	A[解决需要解决的管理问题] --&gt; B(通过结构化分析)
-	B --&gt; C[以理论为指导\以假设为前提]
-	B --&gt; D[以事实为依据]
+&lt;/div&gt;&lt;h2 id=&#34;利用docker出pwn题&#34;&gt;利用Docker出pwn题&lt;/h2&gt;
+&lt;h3 id=&#34;在ubuntu配置docker的环境&#34;&gt;在ubuntu配置docker的环境&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install docker.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//检查docker是否安装成功
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//查看帮助
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker --help
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;command&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --help
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//以下命令如果不加sudo会报错
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker info
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker images
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//容器构建
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//运行容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker run
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//停止容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//强制停止容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker &lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//删除容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker rm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;p&gt;难点：如何抽象&lt;/p&gt;
-&lt;p&gt;学习重点：为什么&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;管理学的特点及其学习方法&#34;&gt;管理学的特点及其学习方法。&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;资源、目标、环境&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;学习方法：熟读经书、结交高人、勤于实践、善于思考&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;什么是管理&#34;&gt;什么是管理？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;管理是&lt;strong&gt;协调&lt;/strong&gt;的一种方式。&lt;/li&gt;
-&lt;li&gt;管理的多样化，是由于协调对象的多样化。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;为什么需要管理&#34;&gt;为什么需要管理？&lt;/h3&gt;
-&lt;div class=&#34;mermaid&#34;&gt;
-graph TD
-	A[人的资源] --&gt;  |投入|B[人的欲望]
-	A --&gt; C[无限的]
-	B --&gt; D[有限的]
-	C --&gt; E[矛盾]
-	D --&gt; E
-	E --&gt; 协调
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; sudo apt install docker-compose
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//docker-compose是用于定义和运行多容器Docker应用程序的工具。通过docker-compose，可以使用yml文件来配置应用程序的所需文件。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;p&gt;由于人&lt;strong&gt;无限的欲望&lt;/strong&gt;与人&lt;strong&gt;有限资源&lt;/strong&gt;的矛盾。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;欲望是无限的。 如果没有欲望则不存在矛盾，则不需要管理。&lt;/p&gt;
-&lt;p&gt;资源是有限的。&lt;/p&gt;
-&lt;p&gt;只有投入资源才能获取资源（没有不劳而获）。 空气？（道德源自于恐惧） 富二代？（前辈的付出，足够的耐心和孝心）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一个老师的有意思的论断：个人的价值取决于自己，所以为什么要批判老板给的太少了。不见钱眼开，但要求公平对待&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;管理就是为了&lt;strong&gt;协调这个矛盾&lt;/strong&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;有哪些协调方法&#34;&gt;有哪些协调方法？&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/div&gt;&lt;h3 id=&#34;ctf_xinetd与pwn_deploy_chroot项目&#34;&gt;ctf_xinetd与pwn_deploy_chroot项目&lt;/h3&gt;
+&lt;h4 id=&#34;ctf_xinetd项目&#34;&gt;ctf_xinetd项目&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/Eadom/ctf_xinetd
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;生产劳动（创造）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;创造：提高向大自然索取的能力。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;把题目可执行文件和flag放在ctf_xinetd/bin中
+ps：不要把 bin 作为题目的名字&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;贸易交换&lt;/p&gt;
+&lt;p&gt;修改ctf.xinetd文件
+回到ctf_xinetd目录下，修改ctf.xinetd
+把图片箭头指向的 helloworld 改成bin文件夹中题目的名字
+保存退出&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;组织分工（联盟）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;道德教育（宗教）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;战争掠夺&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;科学管理&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;当&lt;strong&gt;生产&lt;/strong&gt;力水平受限——&lt;strong&gt;合作&lt;/strong&gt;扩张——扩张到资源掠夺完——&lt;strong&gt;战争&lt;/strong&gt;（只有有强弱差距，资源的损失才会少）——战争到最后只剩强者——&lt;strong&gt;交换&lt;/strong&gt;——有的东西大家有需要——东方（&lt;strong&gt;道德&lt;/strong&gt;教育，贫穷的和谐，限制人的欲望，“欲为万恶之源”）&lt;/p&gt;
-&lt;p&gt;——西方（科学的&lt;strong&gt;管理&lt;/strong&gt;）&lt;/p&gt;
-&lt;p&gt;我觉得老师说的很好的一句话：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;管理只是为了更好的利用资源的一种方法，面对具体的问题，我们应该多管齐下，而不仅仅是依赖科学的管理。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;衡量管理好坏的标准管理的有效性原理&#34;&gt;衡量管理好坏的标准——管理的有效性原理&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;效率(投入产出比)和效益（目标达成度）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;效果=效率（资源有限）+效益（满足需求）&lt;/p&gt;
-&lt;div class=&#34;mermaid&#34;&gt;
-graph TD
-A[有效的管理] --&gt; |资源有限|B[效率:资源产出比]
-A --&gt; |满足目的|C[效益:目标达成度]
-B --&gt; |怎么做,方式方法|E(以比较经济的方法)
-C --&gt; |做什么,价值取向|F(做有助于目标实现的事)
-E --&gt; Q[有效的管理,做好对的事]
-F --&gt; Q
-衡量管理好坏的标准
+&lt;p&gt;Build
+在ctf_xinetd目录下 .&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker build -t &lt;span class=&#34;s2&#34;&gt;&amp;#34;pwn&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;ul&gt;
+&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;效率：怎么做，方式方法&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;效益：做什么，目的&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;二者缺一不可&lt;/p&gt;
-&lt;p&gt;ex：政府盖章，层层把关更为了提高效益，但大大减少了效率&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;效率与效益先比较，效益永远是第一位的。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;作对的事情是所有事情的第一步!&lt;/p&gt;
-&lt;p&gt;将一件错误的事情做的越好，越糟糕。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;管理的有效性原理的应用&#34;&gt;管理的有效性原理的应用&lt;/h3&gt;
-&lt;p&gt;面对一件事的思维方式：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;先了解这是一件什么事？搞清楚&lt;strong&gt;前提&lt;/strong&gt;。——（询问调查）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;应该怎么学习管理学？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;多看书？找个老师教？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;假设了一个前提：对方没有尝试过这些方法，对方是个傻瓜。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;这件事情需要处理吗？——目标定位和价值导向&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们只解决需要解决的事情。&lt;/p&gt;
-&lt;p&gt;根据目标定位和价值取向。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;这件事由谁来做？——角色定位和职业分工&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;根据角色定位和职责分工。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;什么时候做？——重要度和紧急度&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;什么先做？&lt;/p&gt;
-&lt;p&gt;重要和紧急的哪个先做？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;要事优先！！！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;短信发给你，就是告诉你：你有空的时候就看一下。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;怎么做？能不能做？——（计划制定和评定）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;只做重要的，需要解决的，必须由我自己来做的事情，这样才能最大化地体现我自己的价值。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;管理的职能&#34;&gt;管理的职能&lt;/h3&gt;
-&lt;div class=&#34;mermaid&#34;&gt;
-graph TD
-a[决策,制定目标] --&gt; b[计划工作,有限资源的合理配置]
-a --&gt; c[组织工作,人员权力的合理配置]
-a --&gt; e[领导工作,指导协调激励,积极性的调动和方向的把握]
-a --&gt; f[控制工作,检查和监督]
+&lt;p&gt;Run
+在ctf_xinetd目录下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker run -d -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0:pub_port:9999&amp;#34;&lt;/span&gt; -h &lt;span class=&#34;s2&#34;&gt;&amp;#34;pwn&amp;#34;&lt;/span&gt; --name&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pwn&amp;#34;&lt;/span&gt; pwn
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;领导者：三挥手，上挥手（指导方向），中挥手（协调矛盾），下挥手（激励）&lt;/p&gt;
-&lt;p&gt;领导挥挥手，管理者指指手，人民群众齐动手。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;环境是多变的，需要我们及时纠偏。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;管理的实质&#34;&gt;管理的实质&lt;/h3&gt;
-&lt;p&gt;人们为了实现目标的一种手段！&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;所以&lt;strong&gt;管理不是目的&lt;/strong&gt;，不要为了管理而管理。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;管理的效果取决于管理者的水平。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;运用如何面对规章制度&#34;&gt;运用：如何面对规章制度&lt;/h3&gt;
-&lt;p&gt;很难说。（对于管理而言，就事论事是不好的习惯）&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;规章制度是什么？（一种有效的&lt;strong&gt;管理手段&lt;/strong&gt;）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;规章制度的作用（提高效率、落实导向、保证做对的事情、并把对的事情做好）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可不可以违反？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;❌有奖有惩罚（信息传递不明确）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有章要循与目标导向有无矛盾：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;无矛盾，照章执行。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;特殊情况，酌情处理。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;怎么界定“酌情”&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;红绿灯：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;为什么红灯不能闯？
-&lt;ul&gt;
-&lt;li&gt;生命安全&lt;/li&gt;
-&lt;li&gt;交通效率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;有人闯红灯怎么说？（管理的艺术）
-&lt;ul&gt;
-&lt;li&gt;为了保障您和他人的生命安全&lt;/li&gt;
-&lt;li&gt;因为你妨碍了集体的交通效率&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/div&gt;&lt;p&gt;-h：指定容器的hostname
+pub_port：改成你想放置的端口号，建议如8001，8002…等&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;特殊范围：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;当闯红灯的目的和规章的&lt;strong&gt;目的一致&lt;/strong&gt;，可以闯。&lt;/li&gt;
-&lt;li&gt;红灯坏了，&lt;strong&gt;规章失效&lt;/strong&gt;，可以闯。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;酌情原则：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;可以闯，但&lt;strong&gt;目标有利原则不能破&lt;/strong&gt;!可以闯，但不能撞死人。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;前提：&lt;/p&gt;
-&lt;p&gt;（目标是否一致，规章是否失效，主观判断）&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;情况紧急，且条件确认。&lt;/li&gt;
-&lt;li&gt;（紧急和确认也是主观判断）后果自负。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;目标有利原则：局部的与整体的，长远的与暂时的&lt;/p&gt;
-&lt;p&gt;管理的艺术；&lt;/p&gt;
-&lt;p&gt;管理学是科学。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;管理学的思维方式&#34;&gt;管理学的思维方式&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;首先说，&lt;strong&gt;很难说&lt;/strong&gt;：具体问题具体分析&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对管理问题抱有敬畏之心。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;总的来说，要&lt;strong&gt;统统摆平&lt;/strong&gt;：目标导向，综合考虑&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有限的资源，很多的目标&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;具体的来说，从我做起。&lt;strong&gt;责任在我&lt;/strong&gt;：从认识自我、改变自我着手&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;只有自己是可控的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;此时输入docker ps 会发现题目容器已经启动了，可以nc 0.0.0.0 pub_port进行测试一下（pub_port：改成你想放置的端口号）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/YangZiTrick/article/details/109474241&#34;&gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.runoob.com/docker/ubuntu-docker-install.html&#34;&gt;docker | 菜鸟教程&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;pwn_deploy_chroot项目&#34;&gt;pwn_deploy_chroot项目：&lt;/h4&gt;
+&lt;p&gt;当需要部署多道题时，可以采用该项目，一次部署！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 将该项目克隆下来&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/giantbranch/pwn_deploy_chroot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 使用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;步一：将所有pwn题目放入bin目录（注意名字不带特殊字符，因为会将文件名作为linux用户名）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;步二：python initialize.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;该python指python2，该步是设置各种文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;步三：docker-compose up --build -d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;根据Dockerfile文件及其配置文件创建容器并开启
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;pwn出题&#34;&gt;pwn出题&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# NX保护机制：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-z execstack / -z noexecstack  &lt;span class=&#34;c1&#34;&gt;# (关闭 / 开启) 堆栈不可执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Canary：(关闭 / 开启 / 全开启) 栈里插入cookie信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# !开canary好像会造成栈中局部变量的顺序有所改变&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-fno-stack-protector /-fstack-protector / -fstack-protector-all 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ASLR和PIE：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-no-pie / -pie   &lt;span class=&#34;c1&#34;&gt;# (关闭 / 开启) 地址随机化，另外打开后会有get_pc_thunk&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# RELRO：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-z norelro / -z lazy / -z now   &lt;span class=&#34;c1&#34;&gt;# (关闭 / 部分开启 / 完全开启) 对GOT表具有写权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-s   &lt;span class=&#34;c1&#34;&gt;# 去除符号表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Huangjiazhen711/article/details/126815505&#34;&gt;参考&lt;/a&gt;&lt;/p&gt;
 </description>
                 
                 
