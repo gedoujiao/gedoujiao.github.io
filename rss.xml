@@ -21,7 +21,7 @@
             <webMaster>2438863910@qq.com (个豆角)</webMaster>
         
         
-        <lastBuildDate>Wed, 02 Aug 2023 18:58:45 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 02 Aug 2023 19:09:07 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://gedoujiao.github.io/rss.xml" />
         
@@ -61,15 +61,17 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
-A[组织]--&amp;gt;|发起人|B[共同目标]
-A--&amp;gt;C[创业团队]
-A--&amp;gt;D[组织规范]
-C--&amp;gt;E[创业精神和协作意愿]
-B--&amp;gt;E
-B--&amp;gt;F[沟通流畅]
-D--&amp;gt;F
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;前期条件：&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+A[组织]--&gt;|发起人|B[共同目标]
+A--&gt;C[创业团队]
+A--&gt;D[组织规范]
+C--&gt;E[创业精神和协作意愿]
+B--&gt;E
+B--&gt;F[沟通流畅]
+D--&gt;F
+&lt;/div&gt;
+&lt;p&gt;前期条件：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;领导人的发起&lt;/li&gt;
 &lt;li&gt;共同协作的意愿&lt;/li&gt;
@@ -96,14 +98,16 @@ D--&amp;gt;F
 &lt;p&gt;既要分工又要合作。&lt;/p&gt;
 &lt;p&gt;通过分工，发挥个人特长；&lt;/p&gt;
 &lt;p&gt;通过协作，形成集团力量。&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
-A[建立组织]--&amp;gt;B[功能:克服个人的局限性,实现靠个人力量无法实现或难以有效实现的目标]
-B--&amp;gt;C[手段:通过分工,发挥个人特长\通过协作,形成集团力量]
-C--&amp;gt;D[组织成员能力互补]
-C--&amp;gt;E[组织成员志同道合]
-D--&amp;gt;Q[负责人组阁制\行政任命制]
-E--&amp;gt;Q
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;招人很重要：&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+A[建立组织]--&gt;B[功能:克服个人的局限性,实现靠个人力量无法实现或难以有效实现的目标]
+B--&gt;C[手段:通过分工,发挥个人特长\通过协作,形成集团力量]
+C--&gt;D[组织成员能力互补]
+C--&gt;E[组织成员志同道合]
+D--&gt;Q[负责人组阁制\行政任命制]
+E--&gt;Q
+&lt;/div&gt;
+&lt;p&gt;招人很重要：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;能力，高举大旗，明确要求。&lt;/li&gt;
 &lt;/ul&gt;
@@ -135,83 +139,93 @@ E--&amp;gt;Q
 &lt;li&gt;一个组织的绩效，受制于存在于组织内外部各种条件因素的影响。&lt;/li&gt;
 &lt;li&gt;我们将这些存在于一个组织内部和外部的影响组织业绩的各种力量和条件因素的总和称之为&lt;strong&gt;管理环境&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
-A[某一组织管理环境因素]--&amp;gt;B[外部环境因素]
-A--&amp;gt;C[内部环境因素]
-C--&amp;gt;|间接影响|D[组织文化因素]
-C--&amp;gt;|直接影响|E[经营条件因素]
-B--&amp;gt;|间接影响|Q[一般\宏观\环境因素]
-B--&amp;gt;|直接影响|M[任务环境因素]
-D--&amp;gt;核心价值观,目标定位,经营管理理念,行为规范
-E--&amp;gt;人力资源,资金,品牌等.资源,能力,知识
-Q--&amp;gt;政治,经济,社会,技术
-M--&amp;gt;供应商,顾客,竞争对手,主管部门,相关利益群体,地理位置
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;宏观：战略里叫PEST&lt;/p&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+A[某一组织管理环境因素]--&gt;B[外部环境因素]
+A--&gt;C[内部环境因素]
+C--&gt;|间接影响|D[组织文化因素]
+C--&gt;|直接影响|E[经营条件因素]
+B--&gt;|间接影响|Q[一般\宏观\环境因素]
+B--&gt;|直接影响|M[任务环境因素]
+D--&gt;核心价值观,目标定位,经营管理理念,行为规范
+E--&gt;人力资源,资金,品牌等.资源,能力,知识
+Q--&gt;政治,经济,社会,技术
+M--&gt;供应商,顾客,竞争对手,主管部门,相关利益群体,地理位置
+&lt;/div&gt;
+&lt;p&gt;宏观：战略里叫PEST&lt;/p&gt;
 &lt;p&gt;企业成长论：主要取决于内部（知识论）。短期外部、长期内部。&lt;/p&gt;
 &lt;p&gt;是不是管理环境因素，取决于什么：组织目标的定位。（儿童口味）；同样的因素对不同的企业影响不同（利率上扬）。&lt;/p&gt;
 &lt;h5 id=&#34;一般环境因素&#34;&gt;一般环境因素：&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;政治：（二十大报告，政治敏感性）。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
-a[政治体制]--&amp;gt;b[某一国家或地区的政治环境]
-c[政治形势]--&amp;gt;b
-b--&amp;gt;|执政党的路线方针|d[政府对各类组织或活动的态度]
-b--&amp;gt;|政治力量的对比|e[该地区政局的稳定性]
-d--&amp;gt;f[组织可以做什么,可以做到什么]
-e--&amp;gt;g[风险和不确定性大小]
-f--&amp;gt;o[组织业绩]
-g--&amp;gt;o
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+a[政治体制]--&gt;b[某一国家或地区的政治环境]
+c[政治形势]--&gt;b
+b--&gt;|执政党的路线方针|d[政府对各类组织或活动的态度]
+b--&gt;|政治力量的对比|e[该地区政局的稳定性]
+d--&gt;f[组织可以做什么,可以做到什么]
+e--&gt;g[风险和不确定性大小]
+f--&gt;o[组织业绩]
+g--&gt;o
+&lt;/div&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;经济：经济体制，物质资源的状况，消费水平，经济发展水平。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
-a[经济制度]--&amp;gt;k[某一国家或地区的经济环境]
-b[经济结构]--&amp;gt;k
-c[物质资源状况]--&amp;gt;k
-e[国民消费水平]--&amp;gt;k
-f[经济发展水平]--&amp;gt;k
-k--&amp;gt;q[资源获得方式]
-k--&amp;gt;w[价格水准]
-k--&amp;gt;r[人均可支配收入]
-k--&amp;gt;t[需求结构]
-q--&amp;gt;y[可获得的资源及其成本高低]
-w--&amp;gt;y
-r--&amp;gt;m[需求品种,数量和价格可承受力]
-t--&amp;gt;m
-y--&amp;gt;p[组织业绩]
-m--&amp;gt;p
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+a[经济制度]--&gt;k[某一国家或地区的经济环境]
+b[经济结构]--&gt;k
+c[物质资源状况]--&gt;k
+e[国民消费水平]--&gt;k
+f[经济发展水平]--&gt;k
+k--&gt;q[资源获得方式]
+k--&gt;w[价格水准]
+k--&gt;r[人均可支配收入]
+k--&gt;t[需求结构]
+q--&gt;y[可获得的资源及其成本高低]
+w--&gt;y
+r--&gt;m[需求品种,数量和价格可承受力]
+t--&gt;m
+y--&gt;p[组织业绩]
+m--&gt;p
+&lt;/div&gt;
+&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;社会：风俗习惯，法律与道德，人口状况，文化教育水平，。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;（老年大学）&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
-a[风俗习惯]--&amp;gt;q[某一国家或地区的社会环境]
-b[人口状况]--&amp;gt;q
-c[文化教育水平]--&amp;gt;q
-d[道德与法律]--&amp;gt;q
-q--&amp;gt;m[人口结构]
-q--&amp;gt;n[行为规范]
-q--&amp;gt;p[生活方式]
-m--&amp;gt;mp[可获得的劳动力的数量和质量]
-p--&amp;gt;mp
-m--&amp;gt;pm[所需商品的数量于类别]
-p--&amp;gt;pm
-mp--&amp;gt;o[组织业绩]
-pm--&amp;gt;o
-n--&amp;gt;o
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+a[风俗习惯]--&gt;q[某一国家或地区的社会环境]
+b[人口状况]--&gt;q
+c[文化教育水平]--&gt;q
+d[道德与法律]--&gt;q
+q--&gt;m[人口结构]
+q--&gt;n[行为规范]
+q--&gt;p[生活方式]
+m--&gt;mp[可获得的劳动力的数量和质量]
+p--&gt;mp
+m--&gt;pm[所需商品的数量于类别]
+p--&gt;pm
+mp--&gt;o[组织业绩]
+pm--&gt;o
+n--&gt;o
+&lt;/div&gt;
+&lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;技术：技术的发展（无数的创业机会（美国的夜晚保镖可以找中国人，互联网中医））&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
-a[产业结构]--&amp;gt;f[某一国家或地区的科技环境]
-b[技术政策]--&amp;gt;f
-c[科研潜力]--&amp;gt;f
-d[技术水平]--&amp;gt;f
-e[信息设备]--&amp;gt;f
-f--&amp;gt;w[劳动力素质,劳动资料,劳动对象,管理方式和方法]
-w--&amp;gt;o[组织业绩]
-&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;任务环境因素&#34;&gt;任务环境因素：&lt;/h5&gt;
+&lt;div class=&#34;mermaid&#34;&gt;
+graph TD
+a[产业结构]--&gt;f[某一国家或地区的科技环境]
+b[技术政策]--&gt;f
+c[科研潜力]--&gt;f
+d[技术水平]--&gt;f
+e[信息设备]--&gt;f
+f--&gt;w[劳动力素质,劳动资料,劳动对象,管理方式和方法]
+w--&gt;o[组织业绩]
+&lt;/div&gt;
+&lt;h5 id=&#34;任务环境因素&#34;&gt;任务环境因素：&lt;/h5&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
