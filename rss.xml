@@ -21,10 +21,212 @@
             <webMaster>2438863910@qq.com (个豆角)</webMaster>
         
         
-        <lastBuildDate>Sun, 08 Oct 2023 10:42:04 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 08 Oct 2023 19:20:23 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://gedoujiao.github.io/rss.xml" />
         
+        
+            <item>
+                <title>固件解包——binwalk的使用</title>
+                <link>https://gedoujiao.github.io/blogs/%E5%9B%BA%E4%BB%B6%E8%A7%A3%E5%8C%85binwalk%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+                <guid isPermaLink="true">https://gedoujiao.github.io/blogs/%E5%9B%BA%E4%BB%B6%E8%A7%A3%E5%8C%85binwalk%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+                <pubDate>Sun, 08 Oct 2023 19:17:10 &#43;0800</pubDate>
+                
+                    <author>2438863910@qq.com (个豆角)</author>
+                
+                
+                
+                    <description>&lt;h1 id=&#34;固件解包binwalk的使用&#34;&gt;固件解包——binwalk的使用&lt;/h1&gt;
+&lt;h2 id=&#34;binwalk的介绍&#34;&gt;binwalk的介绍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;binwalk是用于搜索给定二进制镜像文件以获取嵌入的文件和代码的工具&lt;/li&gt;
+&lt;li&gt;常用参数：
+&lt;ul&gt;
+&lt;li&gt;-M：根据magic签名扫描结果进行递归提取&lt;/li&gt;
+&lt;li&gt;-e：使用默认的预定义配置文件extract.conf提取探测到的文件系统&lt;/li&gt;
+&lt;li&gt;-d：限制递归提取的深度，默认为8&lt;/li&gt;
+&lt;li&gt;-l：显示完整的扫描结果&lt;/li&gt;
+&lt;li&gt;-A：确定CPU的架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;binwalk基本解包方法介绍&#34;&gt;binwalk基本解包方法介绍&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/%25E5%25BE%25AE%25E4%25BF%25A1%25E6%2588%25AA%25E5%259B%25BE_20231008174500.png&#34; alt=&#34;微信截图_20231008174500&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;-e-分解出压缩包可以将bin文件转化为文件&#34;&gt;-e 分解出压缩包，可以将bin文件转化为文件&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;binwalk -e pcat.bin //要分解的文件名
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;../../images/%25E5%25BE%25AE%25E4%25BF%25A1%25E6%2588%25AA%25E5%259B%25BE_20231008174735.png&#34; alt=&#34;微信截图_20231008174735&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;-d或者dd-分解某种类型的文件&#34;&gt;-D或者–dd 分解某种类型的文件&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;binwalk -D=jpeg/*文件类型*/  pcat.bin  //要分解的文件名
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;-m-递归分解扫描出来的文件&#34;&gt;-M 递归分解扫描出来的文件&lt;/h4&gt;
+&lt;p&gt;（得跟-e或者-D配合使用）。除了会得到文件夹之外还能得到分析（？）的信息（看不懂）&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;binwalk -eM  pcat.bin //要分解的文件名
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;微信截图_20231008174944images25e525be25ae25e425bf25a125e6258825aa25e5259b25be_20231008174944png&#34;&gt;&lt;img src=&#34;../../images/%25E5%25BE%25AE%25E4%25BF%25A1%25E6%2588%25AA%25E5%259B%25BE_20231008174944.png&#34; alt=&#34;微信截图_20231008174944&#34;&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;binwalk pcat.bin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;../../images/%25E5%25BE%25AE%25E4%25BF%25A1%25E6%2588%25AA%25E5%259B%25BE_20231008175808.png&#34; alt=&#34;微信截图_20231008175808&#34;&gt;&lt;/p&gt;
+&lt;p&gt;小端序，squashfs的文件系统&lt;/p&gt;
+&lt;h4 id=&#34;设置过滤选项-x--y&#34;&gt;设置过滤选项-x -y&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-x, --exclude=&amp;lt;str&amp;gt;          Exclude results that match &amp;lt;str&amp;gt;  排除与&amp;lt;str&amp;gt;匹配的结果
+-y, --include=&amp;lt;str&amp;gt;          Only show results that match &amp;lt;str&amp;gt; 只显示与&amp;lt;str&amp;gt;匹配的结果
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;显示完整扫描结果-l&#34;&gt;显示完整扫描结果-l&lt;/h4&gt;
+&lt;h4 id=&#34;查看熵值及有无加密-e&#34;&gt;查看熵值（及有无加密）-E&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@node1:/home/binwalk# binwalk -h
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Binwalk v2.2.1+e0f9bf7   &lt;span class=&#34;c1&#34;&gt;# 版本号&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Craig Heffner, ReFirmLabs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://github.com/ReFirmLabs/binwalk
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usage: binwalk &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;OPTIONS&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;FILE1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;FILE2&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;FILE3&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Disassembly Scan Options:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -Y, --disasm                 Identify the CPU architecture of a file using the capstone disassembler
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -T, --minsn&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;int&amp;gt;            Minimum number of consecutive instructions to be considered valid &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;default: 500&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -k, --continue               Don&lt;span class=&#34;s1&#34;&gt;&amp;#39;t stop at the first match
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Signature Scan Options:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -B, --signature              Scan target file(s) for common file signatures 扫描目标文件以获取常见文件签名
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -R, --raw=&amp;lt;str&amp;gt;              Scan target file(s) for the specified sequence of bytes 扫描目标文件的指定字符序列
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -A, --opcodes                Scan target file(s) for common executable opcode signatures 扫描目标文件中常见可执行代码
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -m, --magic=&amp;lt;file&amp;gt;           Specify a custom magic file to use 指定要使用的自定义签名文件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -b, --dumb                   Disable smart signature keywords  禁用智能签名关键字
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -I, --invalid                Show results marked as invalid 显示完整的扫描结果
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -x, --exclude=&amp;lt;str&amp;gt;          Exclude results that match &amp;lt;str&amp;gt;  排除与&amp;lt;str&amp;gt;匹配的结果
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -y, --include=&amp;lt;str&amp;gt;          Only show results that match &amp;lt;str&amp;gt; 只显示与&amp;lt;str&amp;gt;匹配的结果
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Extraction Options:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -e, --extract                Automatically extract known file types  自动提取已知的文件类型
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -D, --dd=&amp;lt;type[:ext[:cmd]]&amp;gt;  Extract &amp;lt;type&amp;gt; signatures (regular expression), give the files an extension of &amp;lt;ext&amp;gt;, and execute &amp;lt;cmd&amp;gt; 提取&amp;lt;type&amp;gt;签名，为文件扩展名为&amp;lt;ext&amp;gt;，然后执行&amp;lt;cmd&amp;gt;，比如：binwalk -D &amp;#39;&lt;/span&gt;png image:png&lt;span class=&#34;s1&#34;&gt;&amp;#39; firmware.bin
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -M, --matryoshka             Recursively scan extracted files 递归扫描提取的文件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -d, --depth=&amp;lt;int&amp;gt;            Limit matryoshka recursion depth (default: 8 levels deep) 递归深度
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -C, --directory=&amp;lt;str&amp;gt;        Extract files/folders to a custom directory (default: current working directory) 将文件/文件夹提取到自定义目录（默认：当前工作目录）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -j, --size=&amp;lt;int&amp;gt;             Limit the size of each extracted file 限制每个提取文件的大小
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -n, --count=&amp;lt;int&amp;gt;            Limit the number of extracted files 限制提取文件的数量
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -r, --rm                     Delete carved files after extraction 清理零大小文件和提取工具在提取期间无法处理的文件。仅当与--extract或--dd一起使用时有效。有助于清除提取期间从目标文件中复制的误报文件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    -z, --carve                  Carve data from files, but don&amp;#39;&lt;/span&gt;t execute extraction utilities 从文件中读取数据，但不执行提取实用程序
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -V, --subdirs                Extract into sub-directories named by the offset
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Entropy Options:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -E, --entropy                Calculate file entropy 计算文件熵，熵分析可以帮助识别固件映像中有趣的数据部分
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -F, --fast                   Use faster, but less detailed, entropy analysis
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -J, --save                   Save plot as a PNG  自动将 --entropy 生成的熵图保存到 PNG 文件中，而不是显示它
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -Q, --nlegend                Omit the legend from the entropy plot graph 从熵图中省略图例
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -N, --nplot                  Do not generate an entropy plot graph  不生成熵图
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -H, --high&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;float&amp;gt;           Set the rising edge entropy trigger threshold &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;default: 0.95&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  设置上升沿熵触发阈值
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -L, --low&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;float&amp;gt;            Set the falling edge entropy trigger threshold &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;default: 0.85&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  设置下升沿熵触发阈值
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Binary Diffing Options:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -W, --hexdump                Perform a hexdump / diff of a file or files 比较文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -G, --green                  Only show lines containing bytes that are the same among all files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -i, --red                    Only show lines containing bytes that are different among all files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -U, --blue                   Only show lines containing bytes that are different among some files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -u, --similar                Only display lines that are the same between all files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -w, --terse                  Diff all files, but only display a hex dump of the first file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Raw Compression Options:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -X, --deflate                Scan &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; raw deflate compression streams
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -Z, --lzma                   Scan &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; raw LZMA compression streams 通过暴力破解识别可能的原始 LZMA 压缩数据流
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -P, --partial                Perform a superficial, but faster, scan
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -S, --stop                   Stop after the first result
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;General Options:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -l, --length&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;int&amp;gt;           Number of bytes to scan
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -o, --offset&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;int&amp;gt;           Start scan at this file offset
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -O, --base&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;int&amp;gt;             Add a base address to all printed offsets
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -K, --block&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;int&amp;gt;            Set file block size
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -g, --swap&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;int&amp;gt;             Reverse every n bytes before scanning
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -f, --log&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;file&amp;gt;             Log results to file  将结果记录到文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -c, --csv                    Log results to file in CSV format
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -t, --term                   Format output to fit the terminal window
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -q, --quiet                  Suppress output to stdout  禁止输出到标准输出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -v, --verbose                Enable verbose output  详细输出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -h, --help                   Show &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; output
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -a, --finclude&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;str&amp;gt;         Only scan files whose names match this regex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -p, --fexclude&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;str&amp;gt;         Do not scan files whose names match this regex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -s, --status&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;int&amp;gt;           Enable the status server on the specified port 启用指定端口上的状态服务器
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>固件安全实战1</title>
